@@ -6,17 +6,19 @@ int *mal;
 int a=0;
 int i=1;
 
-int incresing(int n)
+int inc(int n)
 {
     int d = 10;
     mal = (int *)malloc(sizeof(int));
     if(n==INFINITY)
         return 1;
-    printf("%p %p\n", &d, mal);
-    return incresing(n+i);
+    printf("&d=%p mal=%p &mal=%p &a=%p &i=%p\n", &d, mal,&mal, &a, &i);
+    inc(n+i);
+    free(mal);
+    return 0;
 }
 
 int main()
 {
-    incresing(a);
+    inc(a);
 }
