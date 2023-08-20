@@ -17,7 +17,7 @@ int inc(int n)
 
 int main()
 {
-    printf("%d", inc(a));
+    inc(a);
 }
 
 
